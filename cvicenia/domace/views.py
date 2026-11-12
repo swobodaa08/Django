@@ -9,7 +9,7 @@ def meno(request):
 def du2_vizitka(request):
     vizitka = {
         "meno": "Samuel Svoboda",
-        "trieda": "3.A",
+        "trieda": "3.AT",
         "vek": 18,
         "predmety": ["Programovanie", "Matematika", "Telesná výchova"],
     }
