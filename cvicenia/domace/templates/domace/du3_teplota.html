@@ -1,0 +1,19 @@
+<h1>Prevodník teploty</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="teplota" value="{{ teplota }}" placeholder="Teplota" required>
+    <select name="smer">
+        <option value="c_f" {% if smer == "c_f" %}selected{% endif %}>°C → °F</option>
+        <option value="f_c" {% if smer == "f_c" %}selected{% endif %}>°F → °C</option>
+    </select>
+    <button type="submit">Previesť</button>
+</form>
+
+{% if chyba %}
+<p>{{ chyba }}</p>
+{% endif %}
+
+{% if vysledok %}
+<h2>Výsledok: {{ vysledok }}</h2>
+{% endif %}
