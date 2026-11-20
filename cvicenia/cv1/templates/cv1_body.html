@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Body na známku</title>
+</head>
+<body>
+    <h1>Body na známku</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label>Body: <input type="text" name="body"></label>
+        <label>Maximum: <input type="text" name="maximum"></label>
+        <button type="submit">Vypočítať</button>
+    </form>
+
+    {% if chyba %}<p>{{ chyba }}</p>{% endif %}
+    {% if vysledok %}<p>{{ vysledok }}</p>{% endif %}
+</body>
+</html>
