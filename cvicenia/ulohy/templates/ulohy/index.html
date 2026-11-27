@@ -1,0 +1,15 @@
+{% extends "ulohy/base.html" %}
+{% block titulok  %}Kalkulacka{% endblock %};
+{% block obsah %}
+
+<h1>Moje cvicenia</h1>
+<ul>
+    <li><a href="{% url 'pozdrav' %}">Pozdrav</a></li>
+    <li><a href="{% url 'sucet' %}">Súčet</a></li>
+    <li><a href="{% url 'obdlznik' %}">Obdlžník</a></li>
+    <li><a href="{% url 'vek' %}">Vek</a></li>
+    <li><a href="{% url 'kalkulacka' %}">Kalkulačka</a></li>
+    <li><a href="{% url 'rozvrh' %}">Rozvrh</a></li>
+</ul>
+
+{% endblock %}

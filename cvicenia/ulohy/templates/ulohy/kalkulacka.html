@@ -1,0 +1,26 @@
+{% extends "ulohy/base.html" %}
+{% block titulok  %}Kalkulacka{% endblock %};
+{% block obsah %}
+
+<h1>Kalkulacka</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="cislo1" required>
+    <select name="operacia" required>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="cislo2" required>
+    <button type="submit">Vypočítať</button>
+</form>
+
+{% if vysledok is not None %}
+<div class="alert alert-success" role="alert">
+  Výsledok: {{ vysledok }}
+</div>
+{% endif %}
+
+
+{% endblock %}
